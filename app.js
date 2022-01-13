@@ -34,7 +34,7 @@ function showError(error) {
 
 function getWeather(latitude, longitude) {
     let api = `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&appid=${key}`
-    let city = `http://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`
+    let city = `https://api.openweathermap.org/geo/1.0/reverse?lat=${latitude}&lon=${longitude}&limit=1&appid=${key}`
 
     fetch(city)
         .then(function(response){
