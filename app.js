@@ -44,6 +44,9 @@ function getWeather(latitude, longitude) {
         .then(function(town){
             weather.city = town[0].name;
         })
+        .catch((error)=> {
+            console.error(error);
+        })
 
     fetch(api)
         .then(function(response){
@@ -59,6 +62,9 @@ function getWeather(latitude, longitude) {
         })
         .then(function(){
             displayWeather()
+        })
+        .catch((error)=> {
+            console.error(error);
         })
 }
 
